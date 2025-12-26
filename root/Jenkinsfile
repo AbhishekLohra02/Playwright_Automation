@@ -1,0 +1,5 @@
+stage('Execute Smoke Suite') {
+    steps {
+        sh './venv/bin/pytest root/tests/ -m smoke --html=smoke_report.html --self-contained-html'
+    }
+}
